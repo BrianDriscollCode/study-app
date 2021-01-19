@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0; 
+}
+
+html, body {
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+}
+
+.App {
+    height: 100%;
+    
+}
+
+.Header {
+    background-color: aliceblue;
+    border-style: solid;
+    border-color: red;
+    height: 8%;
+    margin: 0;
+    padding: 0;
+}
+
+.pageWrapper {
+    display: flex;
+    height: 100%;
+}
+
+.Sidebar {
+    background-color: #add8e6;
+    float:left;
+    width: 30%;
+    height: 100%;
+}
+
+.ToDoSection {
+    background-color: lightslategray;
+    height: 100%;  
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#title {
+    align-self: center;
+}
+
+.taskInput {
+    background-color: lightgreen;
+    margin: 10px 10px 0px 10px;
+    padding: 0;
+    height: 20%;
+    align-self: center;
+    width: 600px;
+}
+
+#title {
+    padding-left: 20px;
+}
+
+#taskInputLine {
+    padding-left: 20px;
+}
+
+#taskInputLine > input {
+    margin-right: 20px;
+}
+
+#taskInputLine > select {
+    margin-right: 20px;
+    width: 80px;
+}
+
+.List {
+    margin: 0 10px 10px 10px;
+    background-color: aliceblue;
+    height: 80%;
+    align-self: center;
+    width: 600px;
+    
+}
+
+.listItem {
+    height: 30px;
+    align-items: center;
+    display: flex;
+}
+
+.listItem:first-child {
+    margin-top: 7px;
+}
+
+.listItem > input {
+    border-radius: 100px;
+}
+
+.taskTime {
+    
+}
+
+/* media queries */
+
+@media (max-width: 550px) {
+    .pageWrapper {
+        flex-direction: column;
+    }
+
+    .Sidebar {
+        width: 100%;
+        height: 60%;
+    }
+}
