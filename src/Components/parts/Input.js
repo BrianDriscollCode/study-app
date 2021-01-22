@@ -7,7 +7,7 @@ class Input extends Component {
 
         return (
             <div className="taskInput">
-                <h1 id="title"> To do List </h1>
+                <h1 id="title"> Study Tasks </h1>
                 <div id="taskInputLine">
                     <label>Task: </label>
                     <input type="text" />

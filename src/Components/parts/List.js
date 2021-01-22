@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 class List extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             numberOfItems: 3,
@@ -31,12 +31,15 @@ class List extends Component {
     render() {
         return (
             <div className="List">
-                {this.state.taskNames.map(item =>
+                {this.props.listItems.map(item =>
                     <div>
-                        <div class="listItem"><input type="checkBox"/> <p>{item.name}</p> <p class="taskTime">8:00am</p></div>
+                        <div class="listItem"><input type="checkBox"/> <p>{item.task}</p> <p class="taskTime">{item.time}</p></div>
                         <hr />
+                        
                     </div>
                 )}
+
+                {/* <p>{console.log(this.props.listItems, "fdsa")}</p> */}
                 
                 
             </div>
