@@ -2,6 +2,45 @@ import { render } from "@testing-library/react";
 import React, { Component } from "react";
 
 class Input extends Component {
+    constructor() {
+        super();
+        this.state = {
+            task: "",
+            time: 0,
+        };
+    };
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+        if (this.state.time == 0) {
+
+            this.setState({
+                time: "4:00am",
+            });
+        }
+        
+        setTimeout(() => this.props.addTask(this.state.task, this.state.time), 100);
+    };
+
+    handleTaskInput = (event) => {
+        event.preventDefault();
+        this.setState({
+            task: event.target.value,
+        });
+        console.log(this.state.task);
+    };
+
+    handleTimeInput = (event) => {
+        event.preventDefault();
+        this.setState({
+            time: event.target.value,
+        });
+        console.log(this.state.time);
+    };
+
+    initialTimeValue = () => {
+        
+    }
 
     render() {
 
@@ -10,12 +49,12 @@ class Input extends Component {
                 <h1 id="title"> Study Tasks </h1>
                 <div id="taskInputLine">
                     <label>Task: </label>
-                    <input type="text" />
+                    <input type="text" name="taskName" onChange={this.handleTaskInput} />
                     <label>Start time: </label>
-                    <select name="taskTimes" >
-                        <option value="4"> 4:00am </option>
-                        <option value="4.5"> 4:30am </option>
-                        <option value="5"> 5:00am </option>
+                    <select name="taskTimes" name="taskTime" value="4:00am" onChange={this.handleTimeInput}>
+                        <option value="4:00am"> 4:00am </option>
+                        <option value="4:30am"> 4:30am </option>
+                        <option value="5:00am"> 5:00am </option>
                         <option value="5.5"> 5:30am </option>
                         <option value="6"> 6:00am </option>
                         <option value="6.5"> 6:30am </option>
@@ -60,13 +99,13 @@ class Input extends Component {
     
                     </select>
     
-                    <button type="button"> Add Task </button>
+                    <button type="button" onClick={this.handleSubmit}> Add Task </button>
                 </div>
                  
             </div>
         );
 
-    }
+    };
 
 };
 

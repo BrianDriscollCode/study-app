@@ -100,8 +100,13 @@ html, body {
     border-radius: 100px;
 }
 
+.taskText {
+    margin-left: 10px;
+}
+
 .taskTime {
-    
+    display: static;
+    right: 100px;
 }
 
 /* media queries */
