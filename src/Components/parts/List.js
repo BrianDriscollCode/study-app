@@ -17,9 +17,12 @@ class List extends Component {
                 {this.props.listItems.map(item =>
                     <div>
                         <div class="listItem">
-                            <input type="checkBox"/> 
-                            <p class="taskText">{item.task}</p> 
-                            <p class="taskTime">{item.time}</p></div>
+                            <input class="checkBox" type="checkBox"/> 
+                            <div class="listTimeAndTask">
+                                <p class="taskText">{item.task}</p> 
+                                <p class="taskTime">{item.time}</p>
+                            </div>
+                        </div>
                         <hr />
                         
                     </div>
