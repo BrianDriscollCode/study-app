@@ -6,10 +6,32 @@ class List extends Component {
 
         this.state = {
             numberOfItems: 3,
+            positionNumber: 0,
         };
+        this.handleCompletedTask = this.handleCompletedTask.bind(this);
     };
+    
 
+    handleCompletedTask = (event) => {
+        event.preventDefault();
 
+        let value = event.target.value;
+        console.log(value);
+        
+    }
+
+    taskPositionSetter = () => {
+
+        if (this.state.positionNumber == 0) {
+            this.setState({
+                positionNumber: 1,
+            });
+            return "position" + this.state.positionNumber;
+        } else {
+            
+            return "position" + this.state.positionNumber;
+        }
+    }
 
     render() {
         return (
@@ -17,9 +39,10 @@ class List extends Component {
                 {this.props.listItems.map(item =>
                     <div>
                         <div class="listItem">
-                            <input class="checkBox" type="checkBox"/> 
+                            <input class="checkBox" type="checkBox"
+                                    onChange ={this.handleCompletedTask} /> 
                             <div class="listTimeAndTask">
-                                <p class="taskText">{item.task}</p> 
+                                <p class="taskText" id={this.taskPositionSetter()}>{item.task}</p> 
                                 <p class="taskTime">{item.time}</p>
                             </div>
                         </div>

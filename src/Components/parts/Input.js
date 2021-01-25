@@ -38,6 +38,7 @@ class Input extends Component {
         console.log(this.state.time);
     };
 
+
     render() {
 
         return (

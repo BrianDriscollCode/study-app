@@ -117,6 +117,13 @@ html, body {
     justify-content: space-between;
 }
 
+/* side bar items */
+
+.sideBarText {
+    display: flex;
+    justify-content: center;
+}
+
 /* media queries */
 
 @media (max-width: 550px) {

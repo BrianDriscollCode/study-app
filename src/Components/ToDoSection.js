@@ -6,10 +6,7 @@ class ToDoSection extends Component {
     constructor() {
         super();
         this.state = {
-            listItems: [
-                {task: "this is a task", time: "8am"},
-                {task: "this is a task", time: "9am"}
-            ]
+            listItems: []
         }
         this.addTask = this.addTask.bind(this);
     }
