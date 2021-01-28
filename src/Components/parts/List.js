@@ -46,8 +46,7 @@ class List extends Component {
                                 <p class="taskTime">{item.time}</p>
                             </div>
                         </div>
-                        <hr />
-                        
+                        <hr class="notebookLine" />
                     </div>
                 )}
 

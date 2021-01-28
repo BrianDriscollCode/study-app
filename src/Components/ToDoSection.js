@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Input from "./parts/Input";
 import List from "./parts/List";
+import background from "../images/table.jpg";
 
 class ToDoSection extends Component {
     constructor() {
@@ -26,7 +27,7 @@ class ToDoSection extends Component {
 
     render() {
         return (
-            <div className="ToDoSection">
+            <div className="ToDoSection" style={{ backgroundImage: `url(${background})`}}>
                 <Input addTask={this.addTask} name="Brian" /> 
                 <List listItems = {this.state.listItems} />
             </div>

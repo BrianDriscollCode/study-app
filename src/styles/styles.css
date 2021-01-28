@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,300;1,400&display=swap');
+
 body {
     margin: 0;
     padding: 0; 
@@ -5,6 +7,7 @@ body {
 
 html, body {
     height: 100%;
+    font-family: Fraunces, serif;
 }
 
 #root {
@@ -16,6 +19,10 @@ html, body {
     
 }
 
+#title {
+    color: white;
+}
+
 .Header {
     background-color: aliceblue;
     border-style: solid;
@@ -23,6 +30,14 @@ html, body {
     height: 8%;
     margin: 0;
     padding: 0;
+}
+
+#taskSection > label {
+    color: white;
+}
+
+#startTimeSection > label {
+    color: white;
 }
 
 .pageWrapper {
@@ -38,7 +53,6 @@ html, body {
 }
 
 .ToDoSection {
-    background-color: lightslategray;
     height: 100%;  
     width: 100%;
     margin: 0;
@@ -49,11 +63,15 @@ html, body {
 
 .taskInput {
     background-color: lightgreen;
-    margin: 10px 10px 0px 10px;
+    background-image: linear-gradient(230deg, #e48e2c , #ba7a30);
+    margin: 30px 10px 0px 10px;
     padding: 0;
     height: 20%;
     align-self: center;
     width: 600px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #title {
@@ -81,10 +99,12 @@ html, body {
 .List {
     margin: 0 10px 10px 10px;
     background-color: aliceblue;
-    height: 80%;
+    height: 70%;
     align-self: center;
     width: 600px;
-    
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 .listItem {
@@ -109,6 +129,10 @@ html, body {
 .taskTime {
     padding-right: 20px;
 
+}
+
+.notebookLine {
+    border-top: 1px solid #a1e0e5;
 }
 
 .listTimeAndTask {
