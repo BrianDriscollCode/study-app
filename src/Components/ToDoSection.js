@@ -3,11 +3,14 @@ import Input from "./parts/Input";
 import List from "./parts/List";
 import background from "../images/table.jpg";
 
+let positionHandler = "";
+
 class ToDoSection extends Component {
     constructor() {
         super();
         this.state = {
-            listItems: []
+            listItems: [],
+            itemPosition: 0,
         }
         this.addTask = this.addTask.bind(this);
     }
@@ -25,11 +28,21 @@ class ToDoSection extends Component {
         });
     }
 
+    generateItemPosition = () => {
+
+        let currentPosition = this.state.itemPosition;
+        this.setState({
+            itemPosition: currentPosition + 1,
+        })
+        console.log(this.state.itemPosition);
+        return this.state.itemPosition;
+    }
+
     render() {
         return (
             <div className="ToDoSection" style={{ backgroundImage: `url(${background})`}}>
-                <Input addTask={this.addTask} name="Brian" /> 
-                <List listItems = {this.state.listItems} />
+                <Input addTask={this.addTask} name="Brian" generateItemPosition={this.generateItemPosition} /> 
+                <List listItems={this.state.listItems} itemPosition={this.state.itemPosition} />
             </div>
         );
     }

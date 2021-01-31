@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+let number = 0;
+
 class List extends Component {
     constructor(props) {
         super(props);
@@ -9,28 +11,23 @@ class List extends Component {
             positionNumber: 0,
         };
         this.handleCompletedTask = this.handleCompletedTask.bind(this);
+        this.strikeThrough = this.strikeThrough.bind(this);
     };
     
 
     handleCompletedTask = (event) => {
-        event.preventDefault();
-
         let value = event.target.value;
         console.log(value);
         
+        if (event.target.value == 'on') {
+            console.log('clicked');
+        }
+        
     }
 
-    taskPositionSetter = () => {
-
-        if (this.state.positionNumber == 0) {
-            this.setState({
-                positionNumber: 1,
-            });
-            return "position" + this.state.positionNumber;
-        } else {
-            
-            return "position" + this.state.positionNumber;
-        }
+    //working here
+    strikeThrough = (event) => {
+        console.log('strike');
     }
 
     render() {
@@ -40,9 +37,9 @@ class List extends Component {
                     <div>
                         <div class="listItem">
                             <input class="checkBox" type="checkBox"
-                                    onChange ={this.handleCompletedTask} /> 
+                                    onChange={this.handleCompletedTask} onClick={this.strikeThrough} /> 
                             <div class="listTimeAndTask">
-                                <p class="taskText" id={this.taskPositionSetter()}>{item.task}</p> 
+                                <p class="taskText">{item.task}</p> 
                                 <p class="taskTime">{item.time}</p>
                             </div>
                         </div>

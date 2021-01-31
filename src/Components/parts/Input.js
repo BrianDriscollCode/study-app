@@ -20,6 +20,7 @@ class Input extends Component {
         }
         
         setTimeout(() => this.props.addTask(this.state.task, this.state.time), 100);
+        this.props.generateItemPosition();
     };
 
     handleTaskInput = (event) => {
@@ -37,6 +38,8 @@ class Input extends Component {
         });
         console.log(this.state.time);
     };
+
+    //handleUniqueId function
 
 
     render() {
