@@ -28,6 +28,15 @@ class List extends Component {
     //working here
     strikeThrough = (event) => {
         console.log('strike');
+        let task = event.target.parentElement;
+        console.log(task.style.textDecoration);
+
+        if (task.style.textDecoration == "" || task.style.textDecoration == null)  {
+            task.style.textDecoration = "line-through";  
+        } else {
+            task.style.textDecoration = null;
+        }
+        
     }
 
     render() {

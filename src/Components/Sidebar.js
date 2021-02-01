@@ -3,13 +3,13 @@ import React from "react";
 function Sidebar() {
     return (
         <div className="Sidebar">
-            <p class="sideBarText"> Sidebar </p>
+            <p class="sideBarText"> Study List </p>
             <hr />
-            <p class="sideBarText"> Sidebar </p>
+            <p class="sideBarText"> Pomodoro Timer </p>
             <hr />
-            <p class="sideBarText"> Sidebar </p>
+            <p class="sideBarText"> Stats </p>
             <hr />
-            <p class="sideBarText"> Sidebar </p>
+            <p class="sideBarText"> Learn More </p>
             <hr />
         </div>
     );
