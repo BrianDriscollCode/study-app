@@ -1,8 +1,7 @@
 import React from "react";
 import background from "../images/table.jpg";
-import TopTimerSection from "./pomodoroTimerParts/TopTimerSection";
 
-class PomodoroTimer extends React.Component {
+class LearnMore extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -13,13 +12,17 @@ class PomodoroTimer extends React.Component {
     render() {
         return(
             <div className="ToDoSection" style={{ backgroundImage: `url(${background})`}}>
-                <TopTimerSection />
+                <div className="taskInput">
+                    <h1 id="title"> Learn More </h1>
+                 
+                </div>
+
                 <div className="List">
                 
-                </div>
+                </div>    
             </div>
         )
     };
 };
 
-export default PomodoroTimer;
+export default LearnMore;

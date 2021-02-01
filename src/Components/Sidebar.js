@@ -8,27 +8,16 @@ class Sidebar extends React.Component {
         };
     };
 
-    changePage = (event) => {
-        console.log(event.target.innerHTML);
-        this.props.topChooseAppRender();
-        console.log('mid render');
-    }
-
-    midChooseAppRender = () => {
-        this.props.topChooseAppRender();
-        console.log('mid render');
-    }
-
     render() {
         return (
             <div className="Sidebar">
-                <p class="sideBarText" onClick={this.changePage} value="studyList">Study List </p>
+                <p class="sideBarText" onClick={this.props.topChooseAppRender} value="Study List">Study List</p>
                 <hr />
-                <p class="sideBarText"> Pomodoro Timer </p>
+                <p class="sideBarText" onClick={this.props.topChooseAppRender}>Pomodoro Timer</p>
                 <hr />
-                <p class="sideBarText"> Stats </p>
+                <p class="sideBarText" onClick={this.props.topChooseAppRender}>Stats</p>
                 <hr />
-                <p class="sideBarText"> Learn More </p>
+                <p class="sideBarText" onClick={this.props.topChooseAppRender}>Learn More</p>
                 <hr />
             </div>
         );

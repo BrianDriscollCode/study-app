@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Input from "./parts/Input";
-import List from "./parts/List";
+import Input from "./toDoParts/Input";
+import List from "./toDoParts/List";
 import background from "../images/table.jpg";
 
 let positionHandler = "";
