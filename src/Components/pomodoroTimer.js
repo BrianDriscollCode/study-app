@@ -1,12 +1,12 @@
 import React from "react";
 
-class pomodoroTimer extends React.Component {
+class PomodoroTimer extends React.Component {
     constructor() {
         super();
         this.state = {
 
         };
-    }
+    };
 
     render() {
         return(
@@ -17,3 +17,4 @@ class pomodoroTimer extends React.Component {
     };
 };
 
+export default PomodoroTimer;

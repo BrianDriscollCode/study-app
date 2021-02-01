@@ -28,6 +28,7 @@ class ToDoSection extends Component {
         });
     }
 
+
     generateItemPosition = () => {
 
         let currentPosition = this.state.itemPosition;
@@ -42,7 +43,10 @@ class ToDoSection extends Component {
         return (
             <div className="ToDoSection" style={{ backgroundImage: `url(${background})`}}>
                 <Input addTask={this.addTask} name="Brian" generateItemPosition={this.generateItemPosition} /> 
-                <List listItems={this.state.listItems} itemPosition={this.state.itemPosition} />
+                <List 
+                    listItems={this.state.listItems} 
+                    itemPosition={this.state.itemPosition}
+                />
             </div>
         );
     }
